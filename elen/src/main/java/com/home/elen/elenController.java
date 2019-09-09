@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.home.elen.elenService;
 
+import lombok.AllArgsConstructor;
 import lombok.extern.java.Log;
 import lombok.extern.log4j.Log4j;
 
@@ -27,9 +28,8 @@ public class elenController {
 		return "Login";
 	}
 	@GetMapping("/Q&A")
-	public void QA(Model model) {
-		log.info("list");
-		model.addAttribute("QA", service.getList());
+	public String QA() {
+		return "Q&A";
 	}
 
 
