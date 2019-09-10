@@ -1,4 +1,4 @@
-package com.home.elen;
+package com.home.domain;
 
 import lombok.Data;
 

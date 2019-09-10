@@ -2,9 +2,9 @@
 <!DOCTYPE mapper
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.home.elen.elenDAO">
+<mapper namespace="com.home.dao.elenDAO">
 
-	<select id="getList" resultType="com.home.elen.elenVO">
+	<select id="getList" resultType="com.home.domain.elenVO">
 	<![CDATA[
 		select * from elen where bno > 0 
 		]]>

@@ -1,4 +1,4 @@
-package com.home.elen;
+package com.home.service;
 
 import java.util.List;
 
@@ -6,12 +6,20 @@ import java.util.List;
 import javax.inject.Inject;
 
 import org.apache.ibatis.session.SqlSession;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
+import com.home.dao.elenDAO;
+import com.home.domain.elenVO;
+
+import lombok.AllArgsConstructor;
 import lombok.extern.log4j.Log4j;
 @Log4j
+@Service
+@AllArgsConstructor
 public class elenServiceImpl implements elenService {
 
-	@Inject
+	@Autowired
 	private elenDAO dao;
 	
 	@Override
