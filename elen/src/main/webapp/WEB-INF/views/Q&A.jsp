@@ -1,4 +1,5 @@
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
     
@@ -67,25 +68,26 @@
 	    	<div class="container">
 	    		<div class="row">
 	    			<div class="col-lg-8">
-	    			<div class="table">
+	    			<table class="table">
 	    				<thead>
 							<tr>
 								<th>#번호</th>
 								<th>제목</th>
+								<th>내용</th>
 								<th>작성자</th>
-								<th>작성일</th>
-								<th>수정일</th>
 							</tr>
 						</thead>
+						<c:forEach items="${list }" var="board">
 						<tr>
-							<td>asdf</td>
-							<td>asdf</td>
-							<td>asdf</td>
-							<td>asdf</td>
+							<th><c:out value="${board.bno }"/></th>
+							<th><c:out value="${board.title }"/></th>
+							<th><c:out value="${board.content }"/></th>
+							<th><c:out value="${board.writer }"/></th>
 						</tr>
-							
-	    			</div>
+						</c:forEach>
+						</table>
 							<!--테이블1-->
+							<c:forEach items="${list }" var="board">
 							<div class="col-lg-12" id="">
 									<div class="statscontainer">
 											<div class="stats">
@@ -105,9 +107,9 @@
 											</div>
 									</div>
 									<div class="summary">
-											<h3><a href="#" class="question-hyperlink">제목</a></h3>
+											<h3><a href="#" class="question-hyperlink" ><c:out value="${board.title }"/></a></h3>
 											<div class="excerpt">
-												contentaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabbbbbbbbb
+												<c:out value="${board.content}"/>
 											</div>
 											<div class="tags t-python t-arrays t-string t-object t-flask">
 													<a href="/questions/tagged/python" class="post-tag" title="" rel="tag">python</a> <a href="/questions/tagged/arrays" class="post-tag" title="" rel="tag">arrays</a> <a href="/questions/tagged/string" class="post-tag" title="show questions tagged 'string'" rel="tag">string</a> <a href="/questions/tagged/object" class="post-tag" title="" rel="tag">object</a> <a href="/questions/tagged/flask" class="post-tag" title="show questions tagged 'flask'" rel="tag">flask</a> 
@@ -121,7 +123,7 @@
 											<a href="/users/11981813/stackflow2kk-hunt"><div class="gravatar-wrapper-32"><img src="https://lh6.googleusercontent.com/-0Qp2nYlmrNo/AAAAAAAAAAI/AAAAAAAAAAA/ACHi3rcVXQBN9wML_lZI8XDIPebRZu0OKg/photo.jpg?sz=32" alt="" width="32" height="32"></div></a>
 									</div>
 									<div class="user-details">
-											<a href="/users/11981813/stackflow2kk-hunt">stackflow2kk hunt</a>
+											<a href="/users/11981813/stackflow2kk-hunt"><c:out value="${board.writer }"/></a>
 											<div class="-flair">
 													<span class="reputation-score" title="reputation score " dir="ltr">1</span>
 											</div>
@@ -130,6 +132,7 @@
 											</div>
 									</div>
 							</div>
+							</c:forEach>
 							<!--테이블1end-->
 							<div class="row mt-5">
 									<div class="col">

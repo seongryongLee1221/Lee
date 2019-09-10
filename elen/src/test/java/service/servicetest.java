@@ -25,6 +25,7 @@ public class servicetest {
 		log.info(service);
 		assertNotNull(service);
 	}
+	
 	@Test
 	public void testGetList() {
 		log.info("getList....");
