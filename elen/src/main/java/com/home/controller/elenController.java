@@ -28,6 +28,11 @@ public class elenController {
 	public String Login() {
 		return "Login";
 	}
+	
+	@GetMapping("/register")
+	public String register() {
+		return "register";
+	}
 
 	@GetMapping("/Q&A") 
 	public String QA(Model model){ 
