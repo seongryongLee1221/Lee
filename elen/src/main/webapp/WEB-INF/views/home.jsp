@@ -39,10 +39,10 @@
 			<nav id="colorlib-main-menu" role="navigation">
 				<ul>
 					<li class="colorlib-active"><a href="home">Home</a></li>
-					<li><a href="Login">Login</a></li>
-					<li><a href="Users">Users</a></li>
-					<li><a href="Q&A">Q&A</a></li>
-					<li><a href="Community">Community</a></li>
+					<li><a href="login">Login</a></li>
+					<li><a href="users">Users</a></li>
+					<li><a href="list">Q&A</a></li>
+					<li><a href="community">Community</a></li>
 					<li><a href="contact">Contact</a></li>
 				</ul>
 			</nav>

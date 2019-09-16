@@ -35,15 +35,15 @@
 	<div id="colorlib-page">
 		<a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle"><i></i></a>
 		<aside id="colorlib-aside" role="complementary" class="js-fullheight text-center">
-			<h1 id="colorlib-logo"><a href="index.html">elen<span>.</span></a></h1>
+			<h1 id="colorlib-logo"><a href="home">elen<span>.</span></a></h1>
 			<nav id="colorlib-main-menu" role="navigation">
 				<ul>
-					<li><a href="index.html">Home</a></li>
-					<li><a href="Login.html">Login</a></li>
-					<li class="colorlib-active"><a href="Users.html">Users</a></li>
-					<li><a href="Q&A.html">Q&A</a></li>
-					<li><a href="Community.html">Community</a></li>
-					<li><a href="contact.html">Contact</a></li>
+					<li><a href="home">Home</a></li>
+					<li><a href="login">Login</a></li>
+					<li class="colorlib-active"><a href="users">Users</a></li>
+					<li><a href="list">Q&A</a></li>
+					<li><a href="community">Community</a></li>
+					<li><a href="contact">Contact</a></li>
 				</ul>
 			</nav>
 

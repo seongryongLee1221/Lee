@@ -35,15 +35,15 @@
 	<div id="colorlib-page">
 		<a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle"><i></i></a>
 		<aside id="colorlib-aside" role="complementary" class="js-fullheight text-center">
-			<h1 id="colorlib-logo"><a href="index.html">elen<span>.</span></a></h1>
+			<h1 id="colorlib-logo"><a href="home">elen<span>.</span></a></h1>
 			<nav id="colorlib-main-menu" role="navigation">
 				<ul>
-					<li><a href="index.html">Home</a></li>
-					<li><a href="Login.html">Login</a></li>
-					<li><a href="Users.html">Users</a></li>
-					<li><a href="Q&A.html">Q&A</a></li>
-					<li class="colorlib-active"><a href="Community.html">Community</a></li>
-					<li><a href="contact.html">Contact</a></li>
+					<li><a href="home">home</a></li>
+					<li class="colorlib-active"><a href="Login">Login</a></li>
+					<li><a href="users">Users</a></li>
+					<li><a href="list">Q&A</a></li>
+					<li><a href="community">Community</a></li>
+					<li><a href="contact">Contact</a></li>
 				</ul>
 			</nav>
 
@@ -58,27 +58,52 @@
 				</ul>
 			</div>
 		</aside> <!-- END COLORLIB-ASIDE -->
-		<div id="colorlib-main">
-			<div class="hero-wrap hero-wrap-2 js-fullheight" style="background-image: url(images/bg_4.jpg);" data-stellar-background-ratio="0.5">
-				<div class="overlay"></div>
-				<div class="js-fullheight d-flex justify-content-center align-items-center">
-					<div class="col-md-8 text text-center">
-						<div class="img mb-4" style="background-image: url(images/author.jpg);"></div>
-						<div class="desc">
-							<h2 class="subheading">Hello I'm</h2>
-							<h1 class="mb-4">Elen Henderson</h1>
-							<p class="mb-4">I am A Blogger Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
-							<ul class="ftco-social mt-3">
-                <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
-                <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
-                <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
-              </ul>
+		<!-- END COLORLIB-MAIN -->
+	</div><!-- END COLORLIB-PAGE -->
+	<div id="colorlib-main">
+		<div class="row justify-content-center">
+				<div class="col-xl-5">
+			<div class="col-lg-12">
+					<div class="p-5">
+						<div class="text-center">
+							<h1 class="h4 text-gray-900 mb-4">Welcome Back!</h1>
+						</div>
+						<form class="user">
+							<div class="form-group">
+								<input type="email" class="form-control form-control-user" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Enter Email Address...">
+							</div>
+							<div class="form-group">
+								<input type="password" class="form-control form-control-user" id="exampleInputPassword" placeholder="Password">
+							</div>
+							<div class="form-group">
+								<div class="custom-control custom-checkbox small">
+									<input type="checkbox" class="custom-control-input" id="customCheck">
+									<label class="custom-control-label" for="customCheck">Remember Me</label>
+								</div>
+							</div>
+							<a href="index.html" class="btn btn-primary btn-user btn-block">
+								Login
+							</a>
+							<hr>
+							<a href="index.html" class="btn btn-google btn-user btn-block">
+								<i class="fab fa-google fa-fw"></i> Login with Google
+							</a>
+							<a href="index.html" class="btn btn-facebook btn-user btn-block">
+								<i class="fab fa-facebook-f fa-fw"></i> Login with Facebook
+							</a>
+						</form>
+						<hr>
+						<div class="text-center">
+							<a class="small" href="forgot-password.html">Forgot Password?</a>
+						</div>
+						<div class="text-center">
+							<a class="small" href="register">Create an Account!</a>
 						</div>
 					</div>
-				</div>
 			</div>
-		</div><!-- END COLORLIB-MAIN -->
-	</div><!-- END COLORLIB-PAGE -->
+			</div>
+		</div>
+	</div>
 
   <!-- loader -->
   <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>

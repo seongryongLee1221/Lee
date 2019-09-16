@@ -24,9 +24,9 @@ public class elenController {
 		return "home";
 	}
 
-	@GetMapping("/Login")
-	public String Login() {
-		return "Login";
+	@GetMapping("/login")
+	public String login() {
+		return "login";
 	}
 	
 	@GetMapping("/register")
@@ -34,9 +34,9 @@ public class elenController {
 		return "register";
 	}
 
-	@GetMapping("/Q&A") 
-	public String QA(Model model){ 
+	@GetMapping("/list") 
+	public String list(Model model){ 
 		model.addAttribute("list", service.getList());
-		return "Q&A";
+		return "list";
 	}
 }

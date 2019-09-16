@@ -39,10 +39,10 @@
 			<nav id="colorlib-main-menu" role="navigation">
 				<ul>
 					<li><a href="home">home</a></li>
-					<li class="colorlib-active"><a href="Login">Login</a></li>
-					<li><a href="Users">Users</a></li>
-					<li><a href="Q&A">Q&A</a></li>
-					<li><a href="Community">Community</a></li>
+					<li class="colorlib-active"><a href="login">Login</a></li>
+					<li><a href="users">Users</a></li>
+					<li><a href="list">Q&A</a></li>
+					<li><a href="community">Community</a></li>
 					<li><a href="contact">Contact</a></li>
 				</ul>
 			</nav>
@@ -103,7 +103,7 @@
                 <a class="small" href="forgot-password.html">Forgot Password?</a>
               </div>
               <div class="text-center">
-                <a class="small" href="login.html">Already have an account? Login!</a>
+                <a class="small" href="login">Already have an account? Login!</a>
               </div>
             </div>
           </div>
