@@ -32,6 +32,11 @@ public class BoardController {
 		model.addAttribute("list", service.getList());
 	}
 	
+//	@GetMapping("/list")
+//	public String list() {
+//		return "list";
+//	}
+
 	@PostMapping("/register")
 	public String register(BoardVO board, RedirectAttributes rttr) {
 		
@@ -49,7 +54,7 @@ public class BoardController {
 	}
 	
 	@PostMapping("/modify")
-	public String modefy(BoardVO board, RedirectAttributes rttr) {
+	public String modify(BoardVO board, RedirectAttributes rttr) {
 		log.info("modify:" + board);
 		if(service.modify(board)) {
 			rttr.addFlashAttribute("result", "success");
@@ -61,8 +66,7 @@ public class BoardController {
 		log.info("remove..." + bno);
 		if (service.remove(bno)) {
 			rttr.addFlashAttribute("result", "success");
-		}
+			}
 		return "redirect:/board/list";
 	}
-	
 }

@@ -1,5 +1,7 @@
 package org.zerock.mapper;
 
+import java.util.List;
+
 //import java.util.List;
 
 import org.junit.Test;
@@ -9,6 +11,7 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.zerock.domain.BoardVO;
 //import org.zerock.domain.Criteria;
+import org.zerock.domain.Criteria;
 
 import lombok.Setter;
 import lombok.extern.log4j.Log4j;
@@ -18,66 +21,72 @@ import lombok.extern.log4j.Log4j;
 @Log4j
 public class BoardMapperTests {
 
-	@Setter(onMethod_ = @Autowired)
+	@Autowired
 	private BoardMapper mapper;
 
-	@Test
-	public void testGetList() {
+//	@Test
+//	public void testGetList() {
+//
+//		mapper.getList().forEach(board -> log.info(board));
+//
+//	}
+//	
+//	@Test
+//	public void testInsert() {
+//		BoardVO board = new BoardVO();
+//		board.setTitle("ìƒˆë¡œ ì‘ì„±í•˜ëŠ” ê¸€");
+//		board.setContent("ìƒˆë¡œ ì‘ì„±í•˜ëŠ” ë‚´ìš©");
+//		board.setWriter("newbie");
+//		
+//		mapper.insert(board);
+//		
+//		log.info(board);
+//		
+//	}
+//	
+//	@Test
+//	public void testInserSelectKey() {
+//		BoardVO board = new BoardVO();
+//		board.setTitle("ìƒˆë¡œ ì‘ì„±í•˜ëŠ” ê¸€ select key");
+//		board.setContent("ìƒˆë¡œ ì‘ì„±í•˜ëŠ” ë‚´ìš© select key");
+//		board.setWriter("newbie");
+//		
+//		mapper.insertSelectKey(board);
+//		log.info(board);
+//		
+//	}
+//	
+//	@Test
+//	public void testRead() {
+//		//ì¡´ì¬í•˜ëŠ” ê²Œì‹œë¬¼ ë²ˆí˜¸ë¡œ í…ŒìŠ¤íŠ¸
+//		BoardVO board = mapper.read(5L);
+//		log.info(board);
+//	}
+//	
+//	@Test
+//	public void testDelete() {
+//		log.info("DELETE COUNT:" + mapper.delete(3L));
+//	}
+//	
+//	@Test
+//	public void testUpdate() {
+//		BoardVO board = new BoardVO();
+//		//ì‹¤í–‰ì „ ì¡´ì¬í•˜ëŠ” ë²ˆí˜¸ì¸ì§€ í™•ì¸í•  ê²ƒ
+//		board.setBno(5L);
+//		board.setTitle("ìˆ˜ì •ëœ ì œëª©");
+//		board.setContent("ìˆ˜ì •ëœ ë‚´ìš©");
+//		board.setWriter("user00");
+//		 
+//		int count = mapper.update(board);
+//		log.info("update count:" + count);
+//	}
 
-		mapper.getList().forEach(board -> log.info(board));
-
-	}
-	
 	@Test
-	public void testInsert() {
-		BoardVO board = new BoardVO();
-		board.setTitle("»õ·Î ÀÛ¼ºÇÏ´Â ±Û");
-		board.setContent("»õ·Î ÀÛ¼ºÇÏ´Â ³»¿ë");
-		board.setWriter("newbie");
+	public void testPaging() {
+		Criteria cri = new Criteria();
 		
-		mapper.insert(board);
+		List<BoardVO> list = mapper.getListWithPaging(cri);
 		
-		log.info(board);
-		
+		list.forEach(board -> log.info(board));
 	}
-	
-	@Test
-	public void testInserSelectKey() {
-		BoardVO board = new BoardVO();
-		board.setTitle("»õ·Î ÀÛ¼ºÇÏ´Â ±Û select key");
-		board.setContent("»õ·Î ÀÛ¼ºÇÏ´Â ³»¿ë select key");
-		board.setWriter("newbie");
-		
-		mapper.insertSelectKey(board);
-		log.info(board);
-		
-	}
-	
-	@Test
-	public void testRead() {
-		//Á¸ÀçÇÏ´Â °Ô½Ã¹° ¹øÈ£Åä Å×½ºÆ®
-		BoardVO board = mapper.read(5L);
-		log.info(board);
-	}
-	
-	@Test
-	public void testDelete() {
-		log.info("DELETE COUNT:" + mapper.delete(3L));
-	}
-	
-	@Test
-	public void testUpdate() {
-		BoardVO board = new BoardVO();
-		//½ÇÇàÀü Á¸ÀçÇÏ´Â ¹øÈ£ÀÎÁö È®ÀÎÇÒ °Í
-		board.setBno(5L);
-		board.setTitle("¼öÁ¤µÈ Á¦¸ñ");
-		board.setContent("¼öÁ¤µÈ ³»¿ë");
-		board.setWriter("user00");
-		 
-		int count = mapper.update(board);
-		log.info("update count:" + count);
-	}
-
-
-
 }

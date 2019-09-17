@@ -16,7 +16,7 @@ import lombok.extern.log4j.Log4j;
 @AllArgsConstructor
 public class BoardServiceImpl implements BoardService {
 
-	@Setter(onMethod_ = @Autowired)
+	@Autowired
 	private BoardMapper mapper;
 
 	@Override
@@ -29,7 +29,6 @@ public class BoardServiceImpl implements BoardService {
 	@Override
 	public BoardVO get(Long bno) {
 
-		log.info("geggetget");
 		return mapper.read(bno);
 
 	}
@@ -53,8 +52,4 @@ public class BoardServiceImpl implements BoardService {
 	
 	 return mapper.getList();
 	 }
-
-
-
-
 }
