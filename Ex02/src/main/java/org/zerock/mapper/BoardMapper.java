@@ -25,7 +25,7 @@ public interface BoardMapper { //DAO
 
 	public List<BoardVO> getListWithPaging(Criteria cri);
 
-//	public int getTotalCount(Criteria cri);
+	public int getTotalCount(Criteria cri);
 
 
 }

@@ -45,11 +45,20 @@ public class BoardControllerTests {
 	}
 	
 	@Test
+	public void testListPaging() throws Exception{
+		log.info(mockMvc.perform(
+				MockMvcRequestBuilders.get("/board/list")
+				.param("pageNum", "2")
+				.param("amount", "50"))
+				.andReturn().getModelAndView().getModelMap()
+				);
+	}
+	@Test
 	public void testRegister() throws Exception{
 		
 		String resultPage = mockMvc.perform(MockMvcRequestBuilders.post("/board/register")
-				.param("title", "Å×½ºÆ® »õ±Û Á¦¸ñ")
-				.param("content", "Å×½ºÆ® »õ±Û ³»¿ë")
+				.param("title", "ï¿½×½ï¿½Æ® ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½")
+				.param("content", "ï¿½×½ï¿½Æ® ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½")
 				.param("writer", "user00")
 				).andReturn().getModelAndView().getViewName();
 		
@@ -71,8 +80,8 @@ public class BoardControllerTests {
 		String resultPage = mockMvc
 				.perform(MockMvcRequestBuilders.post("/board/modify")
 						.param("bno", "30")
-						.param("title", "¼öÁ¤µÈ Å×½ºÆ® »õ±Û Á¦¸ñ")
-						.param("content", "¼öÁ¤µÈ Å×½ºÆ® »õ±Û ³»¿ë")
+						.param("title", "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½×½ï¿½Æ® ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½")
+						.param("content", "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½×½ï¿½Æ® ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½")
 						.param("writer", "user00"))
 				.andReturn().getModelAndView().getViewName();
 		
@@ -81,7 +90,7 @@ public class BoardControllerTests {
 	
 	@Test
 	public void testRemove() throws Exception{
-		//»èÁ¦Àü µ¥ÀÌÅÍº£ÀÌ½º¿¡ °Ô½Ã¹° ¹øÈ£ È®ÀÎÇÒ °Í
+		//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Íºï¿½ï¿½Ì½ï¿½ï¿½ï¿½ ï¿½Ô½Ã¹ï¿½ ï¿½ï¿½È£ È®ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½
 		String resultPage = mockMvc.perform(MockMvcRequestBuilders.post("/board/remove")
 				.param("bno", "25"))
 				.andReturn().getModelAndView().getViewName();
