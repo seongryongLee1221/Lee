@@ -43,6 +43,8 @@
 			<input type='hidden' id='bno' name='bno' value='<c:out value="${board.bno }"/>'>
 			<input type='hidden' name='pageNum' value='<c:out value="${cri.pageNum }"/>'>
 			<input type='hidden' name='amount' value='<c:out value="${cri.amount}"/>'>
+			<input type='hidden' name='keyword' value='<c:out value="${cri.keyword}"/>'>
+			<input type='hidden' name='type' value='<c:out value="${cri.type}"/>'>
 		</form>
       </div>
       <!--  end panel-body -->
@@ -53,7 +55,23 @@
   <!-- end panel -->
 </div>
 <!-- /.row -->
+<script type="text/javascript" src="/resources/js/reply.js"></script>
+<script type="text/javascript">
+console.log("===============");
+console.log("JS TEST");
 
+var bnoValue = '<c:out value="${board.bno}"/>';
+
+//for replyService add test
+replyService.add(
+    
+    {reply:"JS Test", replyer:"tester", bno:bnoValue}
+    ,
+    function(result){ 
+      alert("RESULT: " + result);
+    }
+);
+</script>
 <script type="text/javascript">
 $(document).ready(function(){
 	var operForm = $("#operForm");
