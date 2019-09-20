@@ -64,12 +64,14 @@
 	<!-- end panel -->
 </div>
 <!-- /.row -->
+<!-- 댓글폼 -->
 <div class="row">
 	<div class="col-lg-12">
 		<div class="panel panel-default">
 			<div class="panel-heading">
 				<i class="fa fa-commnets fa-fw"></i>Reply
-			</div>
+				<button id='addReplyBtn' class='btn btn-primary btn-sm pull-right'>New Reply</button>
+				</div>
 			<!-- /.panel-heading -->
 			<div class="panel-body">
 				<ul class="chat">
@@ -163,7 +165,7 @@
 				for (var i = 0, len = list.length || 0; i < len; i++) {
 					str +="<li class='left clearfix' data-rno='"+ list[i].rno+"'>";
 					str +="	<div><div class='header'><strong class='primary-font'>"+list[i].replyer+"</strong>";
-					str +=" 	<small class='pull-right text-muted'>"+list[i].replyDate+"</small></div>";
+					str +=" 	<small class='pull-right text-muted'>"+replyService.displayTime(list[i].replyDate)+"</small></div>";
 					str +=" 	<p>"+list[i].reply+"</p></div></li>";
 				}
 				replyUL.html(str);
