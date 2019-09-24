@@ -263,6 +263,10 @@ $(document).ready(function(){
 	var modalRemoveBtn = $("#modalRemoveBtn");
 	var modalRegisterBtn = $("#modalRegisterBtn");
 
+	$("#modalCloseBtn").on("click", function(e){
+		modal.modal('hide');
+	});
+	
 	$("#addReplyBtn").on("click", function(e){
 		modal.find("input").val("");
 		modalInputReplyDate.closest("div").hide();
@@ -317,18 +321,19 @@ $(document).ready(function(){
 			showList(pageNum);
 		});
 	});
-	modalRemoveBtn.on("click", function(e){
-		
-		var rno = modal.data("rno");
-		
-		replyService.remove(reply, function(result){
-			
-			alert(result);
-			modal.modal("hide");
-			showList(pageNum);
-		});
-	});
-
+	modalRemoveBtn.on("click", function (e){
+	   	  
+	   	  var rno = modal.data("rno");
+	   	  
+	   	  replyService.remove(rno, function(result){
+	   	        
+	   	      alert(result);
+	   	      modal.modal("hide");
+	   	      showList(pageNum);
+	   	      
+	   	  });
+	   	  
+	   	});
 });
 
 </script>

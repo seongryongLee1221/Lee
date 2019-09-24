@@ -9,6 +9,7 @@ import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringRunner;
+import org.zerock.domain.BoardVO;
 import org.zerock.domain.Criteria;
 import org.zerock.domain.ReplyVO;
 
@@ -24,6 +25,9 @@ public class ReplyMapperTests {
 	private Long[] bnoArr = {61L, 62L};
 	@Setter(onMethod_ = @Autowired)
 	private ReplyMapper mapper;
+	
+	@Autowired
+	private BoardMapper boardMapper;
 	
 	@Test
 	public void testMapper() {
@@ -84,4 +88,5 @@ public class ReplyMapperTests {
 		
 		replies.forEach(reply -> log.info(reply));
 	}
+
 }
